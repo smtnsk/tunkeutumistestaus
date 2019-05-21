@@ -14,7 +14,7 @@ http://terokarvinen.com/2019/penetration-testing-tunkeutumistestaus-ict4tn027-30
 
 #### <a id="tehtava1">1. Työkaluja CTF walkthroughsta</a>
 
-Vilkaisin [securitybytes.io](https://securitybytes.io)sta nimim. [Leigh ratkaisun vulnhub.comin Necromancer 1 CTF:ään.](https://securitybytes.io/vulnhub-com-necromancer-1-ctf-walkthrough-4b58a708f747?gi=8abf7af97ae5)
+Vilkaisin [securitybytes.io](https://securitybytes.io):sta nimim. [Leigh ratkaisun vulnhub.comin Necromancer 1 CTF:ään.](https://securitybytes.io/vulnhub-com-necromancer-1-ctf-walkthrough-4b58a708f747?gi=8abf7af97ae5)
 
 Leigh käyttää monia, monia eri työkaluja, mm. `nmap`, `nc`, `arp-scan`, `nikto`, `binwalk`, `snmpwalk`, `aircrack-ng`, `hydra`...\
 Kokeilin kolmea ensimmäistä kotiverkossani.
