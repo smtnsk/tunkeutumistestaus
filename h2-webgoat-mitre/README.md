@@ -10,9 +10,32 @@ http://terokarvinen.com/2019/penetration-testing-tunkeutumistestaus-ict4tn027-30
 
 ---
 
-#### <a id="tehtava1">1. WebGoat</a>
+#### <a id="tehtava1">1. WebGoat, Silent Transactions Attack</a>
 
-// TODO
+Jatkoin siitä kohdasta mihin luennolla tänään jäin, eli AJAX Security - Silent Transactions Attack:\
+![silent-transaction-attack](/h2-webgoat-mitre/screenshots/silent-transaction-attack.png)
+
+Tehtävänä oli siis vaivihkaa suorittaa tilisiirto.\
+Aiempien AJAX Security -tehtävien perusteella ajattelin, että DOM:ia manipuloimalla voisi ehkä tämänkin suorittaa. Avasin siis Firefoxilla sivun lähdekoodin (right click -> View Page Source), mutta sieltä ei löytynyt mitään mielenkiintoista:\
+![page-source](/h2-webgoat-mitre/screenshots/page-source.png)
+
+Seuraavaksi kokeilin valita hiirellä tehtäväalueen sivulta ja View Page Sourcen sijasta klikkasin View Selection Source:\
+![selection-source](/h2-webgoat-mitre/screenshots/selection-source.png)
+
+Ainoa asia mikä tässä iski silmääni, oli tuo mystinen `silentTransaction.js`-tiedosto. Avasin sen:\
+![js-source](/h2-webgoat-mitre/screenshots/js-source.png)
+
+`processData` ja `callback` -funktioissa ei ole mitään mielenkiintoista, mutta `submitData` sen sijaan ottaa argumentteja.\
+Avasin Firefoxin kehitystyökaluista konsolin ja huomasin, että siinä on autofill-ominaisuus, joka kiltisti täydentää komentoja:\
+![autofill](/h2-webgoat-mitre/screenshots/autofill.png)
+
+How nice. Tällähän voisi siis sokkona lähteä kokeilemaan mitä tuhoa on mahdollista saada aikaan.
+
+Suoritan funktion antamalla `accountNo`-argumentiksi `1337` ja `balance`-argumentiksi `31337`:\
+![js-function](/h2-webgoat-mitre/screenshots/js-function.png)
+
+Tehtävä purkissa:\
+![success](/h2-webgoat-mitre/screenshots/success.png)
 
 ---
 
