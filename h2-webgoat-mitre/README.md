@@ -45,4 +45,8 @@ Itse hyökkäys oli selkeä injektio, sillä syötin suoraan JS-funktiolle omat 
 
 #### <a id="tehtava2">2. MITRE Att&ck</a>
 
-// TODO
+[Network Sniffing](https://attack.mitre.org/techniques/T1040/) on perustavanlaatuinen tekniikka, jolla vakoillaan ja mahdollisesti tallennetaan ja analysoidaan verkossa liikkuvaa tietoa. Linkittämälläni sivulla mainitaan mm. Lateral Movement ja Defense Evasion mahdollisina seuraavina askelina. Verkon nuuskimista voi toki käyttää myös hyödyllisiin tarkoituksiin, kuten oman verkon auditointiin.
+
+Mahdollisia työkaluja ovat Wireshark, dnsiff, [Meterpreter](https://www.offensive-security.com/metasploit-unleashed/packet-sniffing/) ja Driftnet.
+
+Esimerkki haittaohjelmasta joka hyödyntää nuuskintaa on [EMOTET](https://blog.trendmicro.com/trendlabs-security-intelligence/new-banking-malware-uses-network-sniffing-for-data-theft/).
