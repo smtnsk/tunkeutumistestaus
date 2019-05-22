@@ -13,14 +13,15 @@ http://terokarvinen.com/2019/penetration-testing-tunkeutumistestaus-ict4tn027-30
 #### <a id="tehtava1">1. WebGoat, Silent Transactions Attack</a>
 
 Jatkoin siitä kohdasta mihin luennolla tänään jäin, eli AJAX Security - Silent Transactions Attack:\
-![silent-transaction-attack](/h2-webgoat-mitre/screenshots/silent-transaction-attack.png)
+![silent-transactions-attack](/h2-webgoat-mitre/screenshots/silent-transactions-attack.png)
 
-Tehtävänä oli siis vaivihkaa suorittaa tilisiirto.\
+Tehtävänä oli siis vaivihkaa suorittaa tilisiirto.
+
 Aiempien AJAX Security -tehtävien perusteella ajattelin, että DOM:ia manipuloimalla voisi ehkä tämänkin suorittaa. Avasin siis Firefoxilla sivun lähdekoodin (right click -> View Page Source), mutta sieltä ei löytynyt mitään mielenkiintoista:\
 ![page-source](/h2-webgoat-mitre/screenshots/page-source.png)
 
-Seuraavaksi kokeilin valita hiirellä tehtäväalueen sivulta ja View Page Sourcen sijasta klikkasin View Selection Source:\
-![selection-source](/h2-webgoat-mitre/screenshots/selection-source.png)
+Seuraavaksi kokeilin valita hiirellä tehtäväalueen sivulta ja View Page Sourcen sijasta klikkasin View Selection Source. Koodi oli sotkuista, joten ajoin sen `htmlformatter.com`:in läpi, jotta se olisi helpompi lukea:\
+![selection-source-js](/h2-webgoat-mitre/screenshots/selection-source-js.png)
 
 Ainoa asia mikä tässä iski silmääni, oli tuo mystinen `silentTransaction.js`-tiedosto. Avasin sen:\
 ![js-source](/h2-webgoat-mitre/screenshots/js-source.png)
@@ -36,6 +37,9 @@ Suoritan funktion antamalla `accountNo`-argumentiksi `1337` ja `balance`-argumen
 
 Tehtävä purkissa:\
 ![success](/h2-webgoat-mitre/screenshots/success.png)
+
+OWASP 10 -haavoittuvuuksista väittäisin tässä tulleen esille `A1:2017-Injection`, `A5:2017-Broken Access Control`, sekä `A6:2017-Security Misconfiguration`.\
+Itse hyökkäys oli selkeä injektio, sillä syötin suoraan JS-funktiolle omat argumenttini. Injektio itse oli mahdollinen, koska sivua ei ollut turvallisesti koodattu ja näin käyttäjä pääsi ajamaan JS-koodia omin nokkineen konsolista.
 
 ---
 
