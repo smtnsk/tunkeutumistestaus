@@ -1,4 +1,4 @@
-## H1 - CTF walkthrough, Kali Live USB
+## H2 - WebGoat -tehtävä, MITRE Att&ck -tekniikka
 
 http://terokarvinen.com/2019/penetration-testing-tunkeutumistestaus-ict4tn027-3004-intensive-summer-course-2019-w21w22-5-credits
 
