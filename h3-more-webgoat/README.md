@@ -12,19 +12,20 @@ http://terokarvinen.com/2019/penetration-testing-tunkeutumistestaus-ict4tn027-30
 
 Tässä tehtävässä näyttää olevan jokin vialla, joten en tiedä, suoritinko tämän kunnialla vai en. Ongelma ilmenee tehtävän edetessä.
 
-Tarkoitus on siis selvittää buffer overflown avulla, missä huoneessa hotellin VIP-asiakas asustaa. Aloitin täyttämällä kentät normaalisti ja seuraamalla mitä tapahtuu.
+Tarkoitus on siis selvittää buffer overflown avulla, missä huoneessa hotellin VIP-asiakas asustaa. Aloitin täyttämällä kentät normaalisti ja seuraamalla mitä tapahtuu.\
+![off-by-one](/h3-more-webgoat/screenshots/off-by-one.png)
 
-Ensimmäisen sivun lähdekoodissa ei näkynyt mitään mielenkiintoista. Annoin etunimeksi "John", sukunimeksi "Smith" huoneen numeroksi "888".
+Ensimmäisen sivun lähdekoodissa ei näkynyt mitään mielenkiintoista. Annoin etunimeksi "John", sukunimeksi "Smith" ja huoneen numeroksi "888".
 
-Toisen sivun lähdekoodissa oli piilotettua kenttiä, mutta en tiennyt, mitä niillä kuuluisi tehdä:\
-![off-by-one](/h3-more-webgoat/screenshots/off-by-one.png)\
+Toisen sivun lähdekoodissa oli piilotettuja kenttiä, mutta en tiennyt, mitä niillä kuuluisi tehdä:\
+![2nd-page](/h3-more-webgoat/screenshots/2nd-page.png)\
 ![hidden-values](/h3-more-webgoat/screenshots/hidden-values.png)
 
 Painoin accept terms.\
 Ja nyt kävi oudosti, sillä WebGoatin mukaan olen läpäissyt tehtävän:\
 ![success](/h3-more-webgoat/screenshots/success.png)
 
-Oliko huoneen 888 John Smith sattumalta VIP-vieras? Ei kai sentään. Painoin "Restart Lesson" ja jatkoin kokeilemista.
+Lähdekoodissa ei ollut huomioitavaa. Oliko huoneen 888 John Smith sattumalta VIP-vieras? Ei kai sentään. Painoin "Restart Lesson" ja jatkoin kokeilemista.
 
 En tunne JavaScriptiä juuri ollenkaan, mutta tiedän mitä buffer overflowt ovat. Kokeilin siis mitä tapahtuu, jos syötän lomakkeisiin hillittömän määrän tekstiä.\
 Kirjoitin konsolissa funktion, joka generoi 5000 merkin pituisen merkkijonon ja kopioin sen lomakkeisiin:\
@@ -41,7 +42,7 @@ Ok, kokeilin samaa 1025, 2049, sekä 4097 merkillä, mutta lopputulos oli sama, 
 Aloitin taas alusta 5000 merkillä, mutta tällä kertaa en pysähtynyt toiselle sivulle, vaan jatkoin kolmannelle asti ja kas kummaa:\
 ![overflow](/h3-more-webgoat/screenshots/overflow.png)
 
-OK! Kokeilin "Jonathan", "Ravern", "4321" ja WebGoat sanoi taas "Congratulations."\
+OK! Kokeilin "Johnathan", "Ravern", "4321" ja WebGoat sanoi taas "Congratulations."\
 Resetoin tehtävän ja kokeilin "Lewis", "Hamilton", "9901" ja taas sain onnittelut.\
 Tämä tehtävä siis näyttää päästävän läpi, jos vain laittaa lomakkeisiin minkä tahansa listalla olevan nimen?
 
