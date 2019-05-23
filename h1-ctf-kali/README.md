@@ -44,7 +44,7 @@ Entäs RDP-palvelin:\
 Viimeiseksi kokeilin `nmap`ia optioilla `-sSU` (tcp+udp), `-p-` (portit 1-65535) ja `-T4` (nopea ajo).\
 Yritin aluksi ajaa komentoa MacOS:stä käsin, mutta se toimi aivan järjettömän hitaasti. Luovutin 15 minuutin odottelun jälkeen ja suoritin komennon Windows-boksin sisällä pyörivästä Arch Linux-virtuaalikoneesta käsin, jolla komento suoriutui huomattavasti nopeammin.
 
-Ensimmäisenä kohteena Windows-boksi, toisena MacBook:\
+Ensimmäisenä kohteena Windows-isäntäkone, toisena MacBook:\
 ![nmap](/h1-ctf-kali/screenshots/nmap.png)
 
 ---
