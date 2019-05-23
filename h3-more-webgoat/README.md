@@ -21,7 +21,7 @@ Toisen sivun lähdekoodissa oli piilotettuja kenttiä, mutta en tiennyt, mitä n
 ![2nd-page](/h3-more-webgoat/screenshots/2nd-page.png)\
 ![hidden-values](/h3-more-webgoat/screenshots/hidden-values.png)
 
-Painoin accept terms.\
+Painoin "Accept Terms".\
 Ja nyt kävi oudosti, sillä WebGoatin mukaan olen läpäissyt tehtävän:\
 ![success](/h3-more-webgoat/screenshots/success.png)
 
