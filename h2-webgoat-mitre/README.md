@@ -20,7 +20,7 @@ Tehtävänä oli siis vaivihkaa suorittaa tilisiirto.
 Aiempien AJAX Security -tehtävien perusteella ajattelin, että DOM:ia manipuloimalla voisi ehkä tämänkin suorittaa. Avasin siis Firefoxilla sivun lähdekoodin (right click -> View Page Source), mutta sieltä ei löytynyt mitään mielenkiintoista:\
 ![page-source](/h2-webgoat-mitre/screenshots/page-source.png)
 
-Seuraavaksi kokeilin valita hiirellä tehtäväalueen sivulta ja View Page Sourcen sijasta klikkasin View Selection Source. Koodi oli sotkuista, joten ajoin sen `htmlformatter.com`:in läpi, jotta se olisi helpompi lukea:\
+Seuraavaksi kokeilin valita hiirellä tehtäväalueen sivulta ja View Page Sourcen sijasta klikkasin View Selection Source. Koodi oli sotkuista, joten ajoin sen ![htmlformatter.com](https://www.htmlformatter.com):in läpi, jotta se olisi helpompi lukea:\
 ![selection-source-js](/h2-webgoat-mitre/screenshots/selection-source-js.png)
 
 Ainoa asia mikä tässä iski silmääni, oli tuo mystinen `silentTransaction.js`-tiedosto. Avasin sen:\
