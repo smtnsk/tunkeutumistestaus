@@ -22,7 +22,7 @@ Kokeilin kolmea ensimmäistä kotiverkossani.
 Aloitin `arp-scan`illa, `arp-scan -l`:\
 ![arp-scan-utun-1](/h1-ctf-kali/screenshots/arp-scan-utun-1.png)
 
-Hmm, en ole tietoinen kyseisestä verkkolaitteesta. Pikaisella [ankkaamisella](https://duck.com) selvisi, että kyseessä on Back To My Mac -toiminnon luoma vekotin, jota en käytä. Päätin laittaa sen pois päältä. Ankka myös kertoi, että tuota toimintoa hallinnoi `/System/Library/LaunchDaemons/com.apple.awacsd.plist`-tiedosto. Olen poistanut `.plist`-tiedostoja käytöstä aiemminkin, joten tiesin, mitä tehdä:\
+Hmm, en tietääkseni käytä tunnelointia mihinkään tällä koneella. Pikaisella [ankkaamisella](https://duck.com) selvisi, että kyseessä on Back To My Mac -toiminnon luoma vekotin, jota en käytä. Päätin laittaa sen pois päältä. Ankka myös kertoi, että tuota toimintoa hallinnoi `/System/Library/LaunchDaemons/com.apple.awacsd.plist`-tiedosto. Olen poistanut `.plist`-tiedostoja käytöstä aiemminkin, joten tiesin, mitä tehdä:\
 ![arp-scan-utun-2](/h1-ctf-kali/screenshots/arp-scan-utun-2.png)
 
 Laitoin myös laitteen pois päältä komennolla `sudo ifconfig utun0 down`.
