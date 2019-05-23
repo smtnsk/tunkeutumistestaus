@@ -10,7 +10,7 @@ http://terokarvinen.com/2019/penetration-testing-tunkeutumistestaus-ict4tn027-30
 
 #### <a id="tehtava1">1. WebGoat, Off-by-One Overflow</a>
 
-Tässä tehtävässä tosin näyttää olevan jokin vialla, joten en tiedä, suoritinko tämän kunnialla vai en. Ongelma ilmenee tehtävän edetessä.
+Tässä tehtävässä näyttää olevan jokin vialla, joten en tiedä, suoritinko tämän kunnialla vai en. Ongelma ilmenee tehtävän edetessä.
 
 Tarkoitus on siis selvittää buffer overflown avulla, missä huoneessa hotellin VIP-asiakas asustaa. Aloitin täyttämällä kentät normaalisti ja seuraamalla mitä tapahtuu.
 
@@ -21,10 +21,10 @@ Toisen sivun lähdekoodissa oli piilotettua kenttiä, mutta en tiennyt, mitä ni
 ![hidden-values](/h3-more-webgoat/screenshots/hidden-values.png)
 
 Painoin accept terms.\
-Ja nyt kävi oudosti, sillä WebGoatin mukaan olen nyt läpäissyt tehtävän:\
+Ja nyt kävi oudosti, sillä WebGoatin mukaan olen läpäissyt tehtävän:\
 ![success](/h3-more-webgoat/screenshots/success.png)
 
-Oliko huoneen 888 John Smith sattumalta VIP-vieras? En hyväksy tätä selitystä, painan "Restart Lesson" ja jatkan kokeilemista.
+Oliko huoneen 888 John Smith sattumalta VIP-vieras? Ei kai sentään. Painoin "Restart Lesson" ja jatkoin kokeilemista.
 
 En tunne JavaScriptiä juuri ollenkaan, mutta tiedän mitä buffer overflowt ovat. Kokeilin siis mitä tapahtuu, jos syötän lomakkeisiin hillittömän määrän tekstiä.\
 Kirjoitin konsolissa funktion, joka generoi 5000 merkin pituisen merkkijonon ja kopioin sen lomakkeisiin:\
@@ -41,8 +41,8 @@ Ok, kokeilin samaa 1025, 2049, sekä 4097 merkillä, mutta lopputulos oli sama, 
 Aloitin taas alusta 5000 merkillä, mutta tällä kertaa en pysähtynyt toiselle sivulle, vaan jatkoin kolmannelle asti ja kas kummaa:\
 ![overflow](/h3-more-webgoat/screenshots/overflow.png)
 
-OK! Kokeilin "Jonathan", "Ravern" ja "4321" ja WebGoat sanoi taas "Congratulations."\
+OK! Kokeilin "Jonathan", "Ravern", "4321" ja WebGoat sanoi taas "Congratulations."\
 Resetoin tehtävän ja kokeilin "Lewis", "Hamilton", "9901" ja taas sain onnittelut.\
 Tämä tehtävä siis näyttää päästävän läpi, jos vain laittaa lomakkeisiin minkä tahansa listalla olevan nimen?
 
-Löysin kyllä salatut arvot lähdekoodista, mutta tämän bugin takia en tiedä, onko tämä onnistuneesti suoritettu vai ei.
+Löysin kyllä salaisia tietoja, mutta tämän bugin takia en tiedä onko tämä onnistuneesti suoritettu vai ei.
