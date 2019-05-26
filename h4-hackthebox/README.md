@@ -4,7 +4,7 @@ http://terokarvinen.com/2019/penetration-testing-tunkeutumistestaus-ict4tn027-30
 
 #### Tehtävänanto:
 
-1. [Hedelmiä matalalla. Mitkä vaikuttavat [HackTheBoxin](https://www.hackthebox.eu) helpoimmilta kohteilta? Tiedustele HackTheBox-verkko esimerkiksi porttiskannerilla ja ryömijällä. Noudata Rules-kohdassa annettua scopea.](#tehtava1)
+1. [Hedelmiä matalalla. Mitkä vaikuttavat HackTheBoxin helpoimmilta kohteilta? Tiedustele HackTheBox-verkko esimerkiksi porttiskannerilla ja ryömijällä. Noudata Rules-kohdassa annettua scopea.](#tehtava1)
 
 2. [Bonus: murtaudu jollekin HackTheBoxin maalikoneelle. Voit katsoa weppiliittymästä vinkkiä siitä, mitkä koneet ovat helppoja.](#tehtava2)
 
@@ -27,7 +27,7 @@ Ilo ei valitettavasti kestänyt kauaa, sillä virtuaalikone kaatui. Kyseessä on
 
 ---
 
-#### <a id="tehtava1">1. HackTheBox kohteita</a>
+#### <a id="tehtava1">1. [HackTheBox](https://www.hackthebox.eu) kohteita</a>
 
 TODO
 
