@@ -19,7 +19,7 @@ Ensimmäinen yritys, jossa käynnistän Kalin USB-tikulta virtuaalikoneeseen:\
 
 ![kali-qemu-2](/h4-hackthebox/screenshots/kali-qemu-2.png)
 
-![metasploit-run](/h4-hackthebox/screenshots/metasploit-run.png)
+![metasploit](/h4-hackthebox/screenshots/metasploit.png)
 
 Helei, näytti toimivan heittämällä.\
 Ilo ei valitettavasti kestänyt kauaa, sillä virtuaalikone kaatui. Kyseessä on ilmeisesti [tunnettu bugi MacOS:ää käyttäessä](https://bugs.launchpad.net/qemu/+bug/1818937). Sain Kalin ja QEMUn toimimaan yhdessä pitkällisen säätämisen jälkeen seuraavilla optioilla:\
