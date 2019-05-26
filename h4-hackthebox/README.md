@@ -14,25 +14,46 @@ http://terokarvinen.com/2019/penetration-testing-tunkeutumistestaus-ict4tn027-30
 
 En halunnut käynnistää Kalia USB-tikulta, joten kokeilin huvikseni [QEMU:a](https://www.qemu.org).
 
-Ensimmäinen yritys, jossa avaan USB-tikulla olevan Kalin virtuaalikoneeseen:\
+Ensimmäinen yritys, jossa käynnistän Kalin USB-tikulta virtuaalikoneeseen:\
 ![kali-qemu-1](/h4-hackthebox/screenshots/kali-qemu-1.png)
+
 ![kali-qemu-2](/h4-hackthebox/screenshots/kali-qemu-2.png)
+
 ![metasploit-run](/h4-hackthebox/screenshots/metasploit-run.png)
 
 Helei, näytti toimivan heittämällä.\
 Ilo ei valitettavasti kestänyt kauaa, sillä virtuaalikone kaatui. Kyseessä on ilmeisesti [tunnettu bugi MacOS:ää käyttäessä](https://bugs.launchpad.net/qemu/+bug/1818937). Sain Kalin ja QEMUn toimimaan yhdessä pitkällisen säätämisen jälkeen seuraavilla optioilla:\
 ![kali-qemu-3](/h4-hackthebox/screenshots/kali-qemu-3.png)
 
-`qemu-live-x86()` käynnistää Kalin USB-tikulta, `qemu-disk-x86()` käynnistää virtuaalikoneen käyttäen qcow2-levykuvaa, jolle Kali on asennetty, ja `qemu-install-x86()` käynnistää Kalin USB-tikulta ja avaa myös qcow2-levykuvan, jolle Kalin voi sitten asentaa. Muistutukseksi, että levukuvan täytyy olla riittävän iso. Asennettuna Kali vie yli 10GB.
+`qemu-live-x86()` käynnistää Kalin USB-tikulta, `qemu-disk-x86()` käynnistää virtuaalikoneen käyttäen qcow2-levykuvaa, jolle Kali on asennetty, ja `qemu-install-x86()` käynnistää Kalin USB-tikulta ja avaa myös qcow2-levykuvan, jolle Kalin voi sitten asentaa. Muistutukseksi, että levukuvan täytyy olla riittävän iso. Pivityksien jälkeen Kali-asennus vei n. 13GB kovalevytilaa.
 
 ---
 
 #### <a id="tehtava1">1. [HackTheBox](https://www.hackthebox.eu) kohteita</a>
 
-TODO
+Käynnistin `metasploit`in ja aloitin verkon kartoittamisen komennolla `db_nmap -n -v -sn 10.10.10.0/24`:\
+![nmap-scan-1](/h4-hackthebox/screenshots/nmap-scan-1.png)
+
+Tulostin löydetyt palvelimet komennolla `hosts --up -c address` ja tallensin tulokset tiedostoon `/root/hackthebox/hostsup`. Jatkoin verkon tutkimista komennolla `db_nmap -n -Pn -sC -sV -O -iL /root/hackthebox/hostsup`.
+
+Kun tuloksia oli tullut, laitoin taustalle hitaampia `nmap` komentoja ja aloin tutkimaan mitä oli löytynyt:\
+![ftp](/h4-hackthebox/screenshots/ftp.png)
+
+![http](/h4-hackthebox/screenshots/http.png)
+
+![ssh](/h4-hackthebox/screenshots/ssh.png)
+
+![imap](/h4-hackthebox/screenshots/imap.png)
+
+`eyewitness`illä sain kuvia siitä, mitä avoimilla http-palvelimilla on vastassa:\
+![eyewitness-report](/h4-hackthebox/screenshots/eyewitness-report.png)
+
+Veikkaan, että joukosta löytyy helppoja kohteita sekä HTTP:n, FTP:n, että SSH:n takaa.
 
 ---
 
 #### <a id="tehtava2">2. HackTheBox murtautuminen</a>
 
-TODO
+Lähdin tutkimaan erästä `nmap`in löytämää FTP-palvelinta. Onnisti välittömästi:\
+![ftp-user-txt](/h4-hackthebox/screenshots/ftp-user-txt.png)
+![user-flag](/h4-hackthebox/screenshots/user-flag.png)
