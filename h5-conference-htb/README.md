@@ -24,8 +24,10 @@ Esitelmä on tunnin mittainen, eikä se käsittele ainoastaan turvallisuuteen li
 
 Yleistä turvallisuuteen liittyvää:
 
-- Verkot tuppaavat olemaan puutteellisesti segmentoituja - reunapalvelimet ovat usein turvattu, mutta ne ohitettuaan tunkeilijoilla ei ole vastassaan suurempia ongelmia liikkua sisäverkossa.
+- Verkot tuppaavat olemaan puutteellisesti segmentoituja - reunapalvelimet ovat usein turvattu, mutta ne ohitettuaan tunkeilijoilla ei ole vastassaan suurempia ongelmia liikkua sisäverkossa
+
 ![google](/h5-conference-htb/screenshots/google.png)
+
 - Sinisen tiimin kuuluu olla yhtä huomaamaton kuin punaisen (ei häiritä verkon toimintaa, pysytään poissa käyttäjien tieltä)
 - Turvallisuutta ei pidä rakentaa kehitysympäristön ympärille, vaan se on sisällytettävä kehitysprosessiin itseensä
 - "Secure by default" + epäturvallisten konfiguraatioiden toteuttamisen pitäisi olla vaikeaa
@@ -38,8 +40,10 @@ Airbnb:n ratkaisusta:
 - Molemminpuolinen TLS-identifikaatio verkon sisällä + service discovery
 - Palvelut saatavilla vain ja ainoastaan proxyjen kautta
 - Verkko on segmentoitu palveluiden mukaan, ei aliverkkojen
-	- "Allow the payment config page to call the payment backend service - but don't allow the Slack bot to!"
+	- "Allow the payment config page to call the payment backend service - but don't allow the Slack bot to!"\
+	
   ![airbnb-2](/h5-conference-htb/screenshots/airbnb-2.png)
+  
   ![airbnb-3](/h5-conference-htb/screenshots/airbnb-3.png)
 
 Käytettyjä teknologioita:
