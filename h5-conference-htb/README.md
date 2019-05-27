@@ -26,7 +26,7 @@ Yleistä turvallisuuteen liittyvää:
 
 - Verkot tuppaavat olemaan puutteellisesti segmentoituja - reunapalvelimet ovat usein turvattu, mutta ne ohitettuaan tunkeilijoilla ei ole vastassaan suurempia ongelmia liikkua sisäverkossa
 
-![google](/h5-conference-htb/screenshots/google.png)
+![google](/h5-conference-htb/screenshots/google.jpg)
 
 - Sinisen tiimin kuuluu olla yhtä huomaamaton kuin punaisen (ei häiritä verkon toimintaa, pysytään poissa käyttäjien tieltä)
 - Turvallisuutta ei pidä rakentaa kehitysympäristön ympärille, vaan se on sisällytettävä kehitysprosessiin itseensä
