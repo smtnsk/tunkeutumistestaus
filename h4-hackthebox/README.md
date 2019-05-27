@@ -12,7 +12,7 @@ http://terokarvinen.com/2019/penetration-testing-tunkeutumistestaus-ict4tn027-30
 
 #### Aloitus: Kali + QEMU
 
-En halunnut käynnistää Kalia USB-tikulta, joten kokeilin huvikseni [QEMU:a](https://www.qemu.org).
+En halunnut bootata konettani tikulta, joten kokeilin huvikseni [QEMU:a](https://www.qemu.org).
 
 Ensimmäinen yritys, jossa käynnistän Kalin USB-tikulta virtuaalikoneeseen:\
 ![kali-qemu-1](/h4-hackthebox/screenshots/kali-qemu-1.png)
