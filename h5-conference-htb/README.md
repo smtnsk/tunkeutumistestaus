@@ -40,7 +40,7 @@ Airbnb:n ratkaisusta:
 - Molemminpuolinen TLS-identifikaatio verkon sisällä + service discovery
 - Palvelut saatavilla vain ja ainoastaan proxyjen kautta
 - Verkko on segmentoitu palveluiden mukaan, ei aliverkkojen
-	- "Allow the payment config page to call the payment backend service - but don't allow the Slack bot to!"\
+	- "Allow the payment config page to call the payment backend service - but don't allow the Slack bot to!"
 	
   ![airbnb-2](/h5-conference-htb/screenshots/airbnb-2.png)
   
@@ -62,4 +62,4 @@ Käytettyjä teknologioita:
 
 #### <a id="tehtava3">3. HTB</a>
 
-![file](/h5-conference-htb/screenshots/file.png)
+...
