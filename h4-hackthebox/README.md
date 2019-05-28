@@ -23,7 +23,7 @@ Ensimmäinen yritys, jossa käynnistän Kalin USB-tikulta virtuaalikoneeseen:\
 
 Helei, näytti toimivan heittämällä.\
 Ilo ei valitettavasti kestänyt kauaa, sillä virtuaalikone kaatui. Kyseessä on ilmeisesti [tunnettu bugi MacOS:ää käyttäessä](https://bugs.launchpad.net/qemu/+bug/1818937). Sain Kalin ja QEMUn toimimaan yhdessä pitkällisen säätämisen jälkeen seuraavilla optioilla:\
-![kali-qemu-3](/h4-hackthebox/screenshots/kali-qemu-3.png)
+![qemu-shortcuts](/h4-hackthebox/screenshots/qemu-shortcuts.png)
 
 `qemu-live-x86()` käynnistää Kalin USB-tikulta, `qemu-disk-x86()` käynnistää virtuaalikoneen käyttäen qcow2-levykuvaa, jolle Kali on asennetty, ja `qemu-install-x86()` käynnistää Kalin USB-tikulta ja avaa myös qcow2-levykuvan, jolle Kalin voi sitten asentaa. Levykuvan täytyy olla riittävän iso - päivityksien jälkeen Kali-asennus vei n. 13GB kovalevytilaa.
 
